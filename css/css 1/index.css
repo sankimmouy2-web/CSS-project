@@ -1,0 +1,24 @@
+.box{
+    width: 470px;
+    height: 470px;
+    border: 10px solid rgb(29, 68, 109);
+    border-radius: 100%;
+    position: relative;
+    margin: auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+
+}
+.active_dot{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    border-radius: 100%;
+    background-color: chartreuse;
+}

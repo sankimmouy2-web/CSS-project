@@ -1,0 +1,23 @@
+.header{
+    color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(129, 74, 185, 0.837);
+}
+.box{
+    width: 30vw;
+    height: 70vh;
+    border: 2px solid gray;
+    border-radius: 15px; 
+    margin: auto;
+    position: relative;
+}
+.box-img{
+    margin-top: 10px;
+    width: 20vw;
+    height: 40vh;
+    border: 1px solid gray;
+    margin: auto;
+}
