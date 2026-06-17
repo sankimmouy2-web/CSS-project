@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let id,Name,gender;
+        let score1,score2,score3,score4,sccore5,total,average,grade;
+        Name=prompt("Input name:");
+        id=parseInt( prompt("Input Id:"));
+        gender=prompt("Input gender:");
+        score1=parseInt(prompt("Input score1 :"));
+        score2=parseInt(prompt("Input score2 :"));
+        score3=parseInt(prompt("Input score3 :"));
+        score4=parseInt(prompt("Input score4 :"));
+        score5=parseInt(prompt("Input score5 :"));
+        total=score1+ score2+score3+score4+score5;
+        average=total/5;
+
+        document.write("Name:"+ Name +"<br>");
+        document.write("Id:"+ id +"<br>");
+        document.write("Gender:"+ gender +"<br>");
+        document.write("Score1:"+ score1 +"<br>");
+        document.write("Score2:"+ score2 +"<br>");
+        document.write("Score3:"+ score3 +"<br>");
+        document.write("Score4:"+ score4 +"<br>");
+        document.write("Score5:"+ score5 +"<br>");
+        document.write("Total:"+ total +"<br>");
+        document.write("Average:"+ average +"<br>");
+        
+        if(average>=95){
+             document.write( "Your grade is  A");
+        }else if(average<95 && average>=85){
+             document.write( "Your grade is  B");
+        }else if(average<85 && average>=75){
+             document.write( "Your grade is  C");
+        }else if(average<75 && average>=65){
+             document.write( "Your grade is  D");
+        }else if(average<65 && average>=50){
+             document.write( "Your grade is  E");
+        }else{
+             document.write( "Your grade is F ");
+        }
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <table class="table w-75">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Bonus</th>
+                <th>Salary</th>
+                <th>Posision</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let id ,name, gender;
+        let salary ,posision,bonus,total ;
+        id=prompt("Input id :");
+        name=prompt(" Input name :");
+        gender=prompt("Input gender:");
+        salary=parseFloat(prompt("Input salary :"));
+        posision=prompt("Input posision:")
+        if(posision ==="manager"){
+            bonus=20;
+             alert("You have bonus 20% of your salary");
+        }else if(posision==="accounting"){
+            bonus=15;
+             alert("You have bonus 15% of your salary");
+        }else if(posision==="IT"){
+            bonus=25;
+             alert("You have bonus 25% of your salary");
+        }else{
+            bonus=10;
+            alert("You have bonus 10% of your salary");
+        }
+        total=salary+(salary*bonus)/100;
+
+        id=document.write("Id" + id +"<br>");
+        name=document.write("Name" + name +"<br>");
+        posision=document.write("Posision" + posision +"<br>");
+        salary=document.write("Salary" + salary +"<br>");
+        total=document.write("Total" + total +"<br>");
+        id=document.getElementById("Id").innerHTML;
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

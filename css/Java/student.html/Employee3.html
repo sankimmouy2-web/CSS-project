@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid d-flex">
+        <form class="w-50 p-5 m-auto border">
+            <h1>Input Infomation Employee</h1>
+            <label for="" class="text-black fs-4">Name</label>
+            <input type="text" id="name" class="mb-3 w-100 border-1 rounded-2"><br>
+            <label for="" class="text-black fs-4">Id</label>
+            <input type="text" id="id" class="mb-3 w-100 border-1 rounded-2"><br>
+            <label for="" class="text-black fs-4">Posision</label>
+            <input type="text" id="posision" class="mb-3 w-100 border-1 rounded-2"><br>
+            <label for="" class="text-black fs-4">Salary</label>
+            <input type="text" id="salary" class="mb-3 w-100 border-1 rounded-2"><br>
+            
+        
+            <button class="btn fs-2 bg-info" type="button" onclick="Employee()">Submit</button>
+            <button type="button" class="fs-2 bg-danger btn">Reset</button>
+        </form>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Posision</th>
+                <th>Salary</th>
+            </tr>
+            <tbody id="Employee">
+                
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function Employee(){
+            let name =document.getElementById("name").value;
+            let id = document.getElementById("id").value;
+            let posision = document.getElementById("posision").value;
+            let salary = Number(document.getElementById("salary").value);
+            document.getElementById("Employee").innerHTML+=`
+            <tr>
+            <td>${name}</td>
+            <td>${id}</td>
+            <td>${posision}</td>
+            <td>${salary}</td>  
+            </tr>       `    
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

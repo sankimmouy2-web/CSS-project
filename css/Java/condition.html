@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let code,qty,price , total_price,payment ,dis;
+        let Name;
+        code=prompt("Input code of product:");
+        Name=prompt("Input name of product:");
+        qty=parseInt(prompt("Input QTY:"));
+        price=parseFloat( prompt("Input Price of product:"));
+        total_price=price*qty;
+        if(total_price>=5 && total_price<=20){
+            dis=10;
+        }else if (total_price>20 && total_price<=30){
+            dis=20;
+        }else if (total_price>30 && total_price<=40){
+            dis=30;
+        }else if (total_price>40 && total_price<=50){
+            dis=40;
+        }else if (total_price>50 && total_price<60){
+            dis=50;
+        }else if (total_price>60 && total_price<70){
+            dis=60;
+        }else{
+            dis=70;
+        }
+        payment=total_price-(total_price*dis)/100;
+        document.write("Code :" + code +"<br>");
+        document.write("Name of product:" + Name +"<br>");
+        document.write("QTY :" + qty +"<br>");
+        document.write("Price : $" + price +"<br>");
+        document.write("Total price : $" + total_price +"<br>");
+        document.write("I have discount for you :" + dis +"%" +"<br>");
+        document.write("Payment : $" + payment+"<br>");
+    </script>
+</body>
+</html>
