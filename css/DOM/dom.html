@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <form action="" class="card w-50 m-auto p">
+        <h1 class="fw-bold fs-2 p-2">Product</h1>
+        <h2 class="fw-bold fs-3">QTY</h2>
+        <input type="text" id="qty" class="rounded rounded-3">
+        <h2 class="rounded rounded-3">Choos Product</h2>
+        <select name="" id="product">
+            <option value="1300">iphone 17 promax 1300$</option>
+            <option value="540">Apple watch 540$</option>
+            <option value="1200">ipad 1200$</option>
+            <option value="300">Airpord 300$</option>
+            <option value="1000">iphone 17 air 1000$</option>
+        </select>
+                <button type="button" class="rounded-4 w-100 p-3 bg-primary mt-3" onclick="Shop()">BUY NOW</button>
+                <button type="reset" class="rounded-4 w-100 p-3 bg-danger mt-3">RESET</button>
+    </form>
+        <div class="container w-50">
+            <div id="reciept" class="border-1 container p-2 rounded mt-3"> </div>
+            
+    <script>
+       function Shop(){
+            let qty=Number(document.getElementById("qty").value);
+            let price=Number(document.getElementById("product").value);
+            let total=price*qty;
+            let dis;
+            if(total<=300){
+                dis=10;
+            }else if(total<=400) {
+                dis=20;
+            }else if(total<=500) {
+                dis=30;
+            }else{
+                dis=35;
+            }
+            let pay =total -(total*dis)/100;
+            document.getElementById("reciept").innerHTML=`
+            <div class="card p-4 mb-3">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>price</th>
+                        <td>$${price}</td>
+                    </tr>
+                    <tr>
+                        <th>QTY</th>
+                        <td>${qty}</td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <td>${total}</td>
+                    </tr>
+                    <tr>
+                        <th>Discount</th>
+                        <td>${dis}%</td>
+                    </tr>
+                    <tr>
+                        <th>Payment</th>
+                        <td>$${pay}</td>
+                    </tr>
+                </table>
+            </div>`;
+       }
+    </script>
+     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
